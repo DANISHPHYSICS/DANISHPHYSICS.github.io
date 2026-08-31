@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum CNNs | Danish Abbas Khan</title>
+    <!-- Note the ../ which tells the browser to go UP one folder to find style.css -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Interactive Background -->
+    <div id="particles-js" style="opacity: 0.3;"></div>
+
+    <div class="article-header" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1920&auto=format&fit=crop');">
+        <div class="article-header-overlay"></div>
+        <h1 class="article-title">Brain Tumor Classification Using Two-Stream Hybrid Quantum CNNs</h1>
+    </div>
+
+    <div class="container">
+        <div class="article-content">
+            <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            
+            <p style="color: var(--accent-blue); font-style: italic; margin-bottom: 20px;">March 2026 – May 2026 | Academic Research Project (PIEAS)</p>
+            
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Project Overview</h2>
+            <p>
+                In this project, I architected a Two-Stream Hybrid Quantum Convolutional Neural Network (HQ-CNN). The goal was to fuse classical deep learning architectures with quantum circuits to achieve highly accurate, non-linear edge detection on medical imaging data.
+            </p>
+            <br>
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Technical Implementation</h2>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Architecture:</strong> Fused an unfrozen EfficientNetB0 classical backbone with a 4-qubit parameterized quantum circuit using PennyLane.</li>
+                <li><strong>Data Processing:</strong> Engineered a robust pipeline using OpenCV for smart contour-cropping of the Figshare brain MRI dataset. Balanced the data to 7,500 samples using stratified augmentation.</li>
+                <li><strong>Optimization:</strong> Developed a fast vectorized quantum convolution algorithm to eliminate training bottlenecks.</li>
+            </ul>
+            <br>
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Results</h2>
+            <p>
+                The model ultimately achieved a highly robust <strong>94.05% accuracy</strong> across 5-fold cross-validation, demonstrating the viability of quantum-classical hybrid models in critical medical diagnostics.
+            </p>
+            
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": { "number": { "value": 30 }, "color": { "value": "#38bdf8" }, "line_linked": { "color": "#38bdf8" } }
+        });
+    </script>
+</body>
+</html>

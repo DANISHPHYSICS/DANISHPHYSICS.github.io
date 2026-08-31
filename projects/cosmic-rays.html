@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Ray Ionization | Danish Abbas Khan</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="particles-js" style="opacity: 0.3;"></div>
+
+    <div class="article-header" style="background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1920&auto=format&fit=crop');">
+        <div class="article-header-overlay"></div>
+        <h1 class="article-title">Study of Cosmic Ray Induced Atmospheric Ionization</h1>
+    </div>
+
+    <div class="container">
+        <div class="article-content">
+            <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            
+            <p style="color: var(--accent-blue); font-style: italic; margin-bottom: 20px;">Undergraduate Dissertation (BS Physics) | Sep 2025 – July 2026 | PIEAS</p>
+            
+            <div style="margin-bottom: 30px;">
+                <a href="https://drive.google.com/drive/folders/1ZmOhlMrXC7er30JZ71-tXqqdIfyki_eJ?usp=sharing" target="_blank" class="btn btn-primary" style="display: inline-block;">Access Full Thesis via Google Drive</a>
+            </div>
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Project Overview</h2>
+            <p style="margin-bottom: 15px;">
+                This project presents an extensive computational investigation into high-energy cosmic rays, their resultant atmospheric ionization profiles, and their direct impact on cloud microphysics and artificial cloud seeding. When primary cosmic rays—primarily protons and heavier nuclei—enter the Earth's atmosphere, they initiate extensive air shower (EAS) cascades. These cascades propagate through complex hadronic and electromagnetic interactions, generating a multitude of secondary particles, including muons, electrons, positrons, and photons. As these particles travel through successive atmospheric layers, they deposit energy and create altitude-dependent ionization profiles, which act as a critical driver for tropospheric cloud formation and ion-induced nucleation.
+            </p>
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Methodology & Simulation Constraints</h2>
+            <p style="margin-bottom: 15px;">
+                The first stage of the research established a macroscopic baseline utilizing <strong>CORSIKA</strong>, a highly regarded Monte Carlo framework for simulating extensive air showers. To ensure real-world accuracy, atmospheric conditions were strictly defined using real-time environmental profiles from the Global Data Assimilation System (GDAS). This provided highly localized and altitude-specific temperature, pressure, and density variables rather than relying on simplified standard atmospheres. This phase focused on analyzing the longitudinal development of the showers, characterizing the precise location and energy of the Pfotzer maximum. However, while CORSIKA yielded incredibly rich energetic metadata and particle IDs, it exhibited severe limitations regarding spatial control.
+            </p>
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Micro-Scale Geant4 Modeling of Chemical Aerosol Seeding in Custom Atmospheric Cloud Layers</h2>
+            <p style="margin-bottom: 15px;">
+                To overcome macro-scale simulation limitations, I transitioned to a highly customized, micro-scale virtual laboratory built within the <strong>Geant4 Monte Carlo simulation framework</strong>. I constructed a 3D Cartesian atmospheric volume measuring <strong>10 km × 10 km horizontally and extending 12 km vertically</strong>, stratified into <strong>120 uniform layers</strong> (each exactly 100 m thick) to model realistic temperature, pressure, and Relative Humidity (RH) gradients based on the International Standard Atmosphere. 
+            </p>
+            <p style="margin-bottom: 15px;">
+                To investigate the microphysics of cloud seeding, I modeled the atmospheric injection of 30 different industrial aerosol agents at a highly concentrated mass fraction of <strong>0.01%</strong> within targeted altitude layers: a warm cloud zone at <strong>1.5 km to 1.6 km (Layer 15)</strong> and a cold cloud zone at <strong>5.5 km to 5.6 km (Layer 55)</strong>. To ensure absolute statistical rigor and isolate the subtle ionization changes caused by these chemicals from massive background fluctuations, I developed a <strong>perfect random seed synchronization protocol</strong> (<code>seed = 123456789 + EventID</code>). This locked the physical trajectories of the incoming cosmic-ray secondaries (sourced from the pre-computed <strong>CRY library</strong> at 11.3 km) between my baseline pure-air run and my chemical-doped runs, ensuring that any recorded deviation in energy deposition was entirely due to physical aerosol-particle interactions.
+            </p>
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Groundbreaking Results & Ionization Modulation</h2>
+            <p style="margin-bottom: 15px;">
+                The core of the research analyzed how the injected aerosol chemical structures perturb secondary cosmic-ray energy deposition through the competing mechanisms of the <strong>Photoelectric Effect</strong> and <strong>Compton Scattering</strong>, directly dictating the localized ion-pair production rate. 
+            </p>
+            <p style="margin-bottom: 15px;">
+                The simulation yielded several groundbreaking results, establishing <strong>Ammonium Sulfate (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></strong> as the warm cloud champion with a <strong>+0.75%</strong> ionization enhancement—driven by its low atomic number which maximizes Compton scattering, and its high hydrogen density which triggers violent neutron recoils. In the cold cloud glaciogenic zone, <strong>Lead Iodide (PbI<sub>2</sub>)</strong> was identified as the peak enhancer at <strong>+0.38%</strong>, leveraging its massive density to launch forward-scattered electromagnetic avalanches. Conversely, the industry-standard <strong>Silver Iodide (AgI)</strong> acted as a significant ionization suppressant, dropping local ionization by <strong>-1.9%</strong> because its heavy atomic components self-absorb their own low-energy secondary electrons. 
+            </p>
+            <p style="margin-bottom: 15px;">
+                Ultimately, this research established a physically grounded framework proving that targeted aerosol seeding can artificially modulate the local atmospheric electrical conductivity, creating electrostatic "hotspots" that enhance the coagulation efficiency of supercooled water droplets and catalyze <strong>Cloud Condensation Nuclei (CCN)</strong> activation.
+            </p>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": { "number": { "value": 30 }, "color": { "value": "#38bdf8" }, "line_linked": { "color": "#38bdf8" } }
+        });
+    </script>
+</body>
+</html>

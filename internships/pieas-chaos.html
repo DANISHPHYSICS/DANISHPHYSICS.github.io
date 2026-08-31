@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Magnetic Pendulum | PIEAS Intern</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="particles-js" style="opacity: 0.3;"></div>
+
+    <div class="article-header" style="background-image: url('https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=1920&auto=format&fit=crop');">
+        <div class="article-header-overlay"></div>
+        <h1 class="article-title">The Magnetic Pendulum:<br>Experimental and Theoretical Analysis</h1>
+    </div>
+
+    <div class="container">
+        <div class="article-content">
+            <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            
+            <p style="color: var(--accent-blue); font-style: italic; margin-bottom: 20px;">Jul 2024 – Sep 2024 | Supervisor: Dr. Zaheer Asghar | PIEAS</p>
+            
+            <div style="margin-bottom: 30px;">
+                <a href="../assets/Pendulum_Internship_Report.pdf" target="_blank" class="btn btn-primary" style="display: inline-block;">View Full Internship Report (PDF)</a>
+            </div>
+
+            <!-- Internal Image Added here -->
+            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=1200&auto=format&fit=crop" alt="Chaos Theory Visualization" class="content-img">
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Project Overview</h2>
+            <p style="margin-bottom: 15px;">
+                This summer project centered on the experimental and theoretical analysis of a magnetic pendulum, serving as a complex demonstration of non-linear dynamics, chaotic behavior, and bistable states. The project demanded both the hands-on engineering of a physical apparatus and rigorous computational modeling.
+            </p>
+            
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Experimental Apparatus Repair & Design</h2>
+            <p style="margin-bottom: 15px;">
+                I began by repairing and calibrating a malfunctioning magnetic pendulum setup. The apparatus consisted of an Arduino controller, a stepper motor, an LDR (Light Dependent Resistor) casing, and a pendulum rod hanging on a crank mechanism with disk magnets. I replaced a faulty Arduino Mega with an Arduino UNO, re-wired the motor driver, and integrated the stepper motor to drive the system. Using C++ Arduino code, I captured the pendulum's changing oscillations by measuring light intensity variations across the LDR, allowing precise calculation of velocity and momentum.
+            </p>
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Theoretical Python Modeling</h2>
+            <p>
+                In parallel with the physical experiment, I developed a theoretical model for the random forced damped non-linear pendulum using <strong>Python</strong>. I modeled six distinct forces (including repulsive magnetic forces, sinusoidal driving forces, and damping forces) and solved the resulting system of non-linear ordinary differential equations (ODEs). The Python analysis successfully generated highly accurate approximations of chaotic behavior, including detailed phase portraits, bifurcation diagrams, and Lyapunov exponent plots, demonstrating the intricate interplay between theoretical predictions and experimental physics.
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": { "number": { "value": 30 }, "color": { "value": "#38bdf8" }, "line_linked": { "color": "#38bdf8" } }
+        });
+    </script>
+</body>
+</html>
