@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Geant-4 and Corsika | NCP Intern</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav id="sticky-banner">
+        <img src="../assets/profile.png" alt="Danish Abbas Khan" class="banner-img">
+        <div class="banner-info">
+            <span class="banner-name">Danish Abbas Khan</span>
+            <span class="banner-title">BS Physics Graduate</span>
+        </div>
+    </nav>
+    <div id="theme-switch" class="dark" title="Toggle Theme">
+        <div class="knob"></div>
+        <span class="icon-sun">&#x2600;&#xFE0F;</span><span class="icon-moon">&#x1F319;</span>
+    </div>
+    <div id="particles-js" style="opacity: 0.3;"></div>
+    <canvas id="cosmic-canvas"></canvas>
+
+    <div class="article-header" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop');">
+        <div class="article-header-overlay"></div>
+        <h1 class="article-title">Basics of Geant-4 and Corsika:<br>Simulation technique to study particle interactions</h1>
+    </div>
+
+    <div class="container">
+        <div class="article-content">
+            <a href="../index.html" class="back-btn">&larr; Back to Portfolio</a>
+            
+            <p style="color: var(--accent-blue); font-style: italic; margin-bottom: 20px;">Jun 2025 - Aug 2025 | Supervisor: Dr. Ashfaq Ahmad | National Centre for Physics (NCP)</p>
+            
+            <div style="margin-bottom: 30px;">
+                <a href="../assets/NCP_Internship_Report.pdf" target="_blank" class="btn btn-primary" style="display: inline-block;">View Full Internship Report (PDF)</a>
+            </div>
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Executive Summary</h2>
+            <p style="margin-bottom: 15px;">
+                This research internship focused on mastering and deploying advanced Monte Carlo simulation frameworks-<strong>Geant4</strong> and <strong>CORSIKA 7.8010</strong>-to model particle transport through matter and simulate particle interactions with the atmosphere. The core work combined detector geometry configuration, high-energy particle physics, Linux system management, and custom Python data engineering.
+            </p>
+            
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Geant4 Particle Tracking & Volume Interaction</h2>
+            <p style="margin-bottom: 15px;">
+                I configured a Windows compilation environment utilizing Visual Studio Build Tools, CMake, and Geant4 batch scripts. During the internship, I executed simulations shooting 6 MeV gamma rays through custom trapezoidal and conical shapes, visualizing trajectories with interactive OpenGL scenes. I successfully modified the C++ simulation code to log precise step-by-step physical parameters, including 3D spatial coordinates, energy deposition, kinetic energy, and momentum.
+            </p>
+
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">CORSIKA Atmospheric Particle Simulation</h2>
+            <p style="margin-bottom: 15px;">
+                Working in a Linux environment, I configured CORSIKA input files to define physical variables of particle interactions with the atmosphere, including primary particle types, specific energy ranges, incidence angles, and atmospheric profiles. I executed multi-particle runs to generate comprehensive statistical models of cascade physics and longitudinal/lateral development.
+            </p>
+            
+            <h2 style="color: var(--accent-purple); margin-bottom: 15px;">Python Data Engineering Pipeline</h2>
+            <p style="margin-bottom: 15px;">
+                Because CORSIKA outputs in a highly optimized proprietary binary format, I developed custom <strong>Jupyter Notebook scripts</strong> utilizing Python's <code>struct</code> library to decode the raw binary layout. Using <strong>NumPy</strong> and <strong>Pandas</strong>, I reshaped and structured the particle data, successfully converting complex "long files" into high-efficiency CSV files to analyze particle distribution counts and energy deposition mechanics across varying atmospheric depths.
+            </p>
+
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": { "number": { "value": 30 }, "color": { "value": "#38bdf8" }, "line_linked": { "color": "#38bdf8" } }
+        });
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
