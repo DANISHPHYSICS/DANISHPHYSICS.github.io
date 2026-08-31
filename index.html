@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danish Abbas Khan | Particle & Astrophysics</title>
+    <style>
+        /* CSS Variables for Theme */
+        :root {
+            --bg-color: #050814; /* Deep space black/blue */
+            --panel-bg: rgba(13, 20, 36, 0.85); /* Glassmorphism panels */
+            --text-main: #e2e8f0;
+            --accent-cyan: #00f0ff; /* High energy cyan */
+            --accent-purple: #b026ff; /* Cosmic purple */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        /* Interactive Particle Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Puts it behind everything */
+        }
+
+        header {
+            padding: 6rem 1rem 4rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+            background: linear-gradient(180deg, rgba(5,8,20,0.9) 0%, rgba(5,8,20,0) 100%);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 20px rgba(0, 240, 255, 0.3);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-top: 15px;
+            color: #a0aec0;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        section {
+            background: var(--panel-bg);
+            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 10px 40px 0 rgba(0, 240, 255, 0.1);
+        }
+
+        h2 {
+            color: #fff;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(to right, var(--accent-cyan), transparent) 1;
+            padding-bottom: 10px;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--accent-cyan);
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+        }
+
+        .item {
+            margin-bottom: 25px;
+        }
+        
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .date {
+            font-style: italic;
+            color: #8a9fc2;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .contact-links {
+            margin-top: 30px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin: 5px 10px;
+            font-weight: bold;
+            border: 2px solid var(--accent-cyan);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-cyan);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: rgba(176, 38, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            border: 1px solid rgba(176, 38, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(176, 38, 255, 0.3);
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 15px rgba(176, 38, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        /* Glowing text highlights */
+        strong {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Particle.js Background Container -->
+    <div id="particles-js"></div>
+
+    <header>
+        <h1>Danish Abbas Khan</h1>
+        <p>Computational Physicist | High Energy Physics & Quantum ML</p>
+        <div class="contact-links">
+            <a href="mailto:danishabbasphysics@gmail.com">Email Me</a>
+            <a href="https://linkedin.com/in/danish-abbas-03658628a" target="_blank">LinkedIn</a>
+            <a href="../3.Danish Abbas Khan_CV.pdf" target="_blank">View CV</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>Cosmic Perspective</h2>
+            <p>I am a Physics graduate from the Pakistan Institute of Engineering and Applied Sciences (PIEAS) specializing in computational physics, atmospheric ionization, and high-energy particle simulations. Driven by a desire to understand fundamental forces, I leverage advanced Monte Carlo frameworks (CORSIKA, GEANT4) and quantum computing to solve complex physical anomalies. I am currently seeking international Master's opportunities to push the boundaries of particle and astrophysical research.</p>
+        </section>
+
+        <section id="education">
+            <h2>Academic Trajectory</h2>
+            <div class="item">
+                <h3>Bachelors of Science in Physics</h3>
+                <div class="date">Sep 2022 – July 2026 | PIEAS, Islamabad, Pakistan</div>
+                <p><strong>CGPA:</strong> 3.69/4 | <strong>Class Rank:</strong> 3/40</p>
+                <p><strong>Thesis:</strong> Study of Cosmic Ray Atmospheric Ionization</p>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research & Simulations</h2>
+            <div class="item">
+                <h3>Undergraduate Dissertation: Cosmic Ray Ionization</h3>
+                <div class="date">Sep 2025 – July 2026 | PIEAS</div>
+                <ul>
+                    <li>Conducted macroscopic Monte Carlo simulations of extensive air showers using <strong>CORSIKA</strong> in a Linux environment, tracking 10,000 primary particles.</li>
+                    <li>Transitioned core simulation engine to <strong>C++/Geant4</strong> to engineer a high-precision 10×10×12 km³ atmospheric volume, optimizing geometry via empirical thermodynamic models.</li>
+                    <li>Developed automated data pipelines in <strong>Python and R</strong> to parse massive binary arrays, rendering complex spatial energy deposition heatmaps and cascade profiles.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>High Energy Physics Intern</h3>
+                <div class="date">Jun 2025 – Aug 2025 | National Centre for Physics (NCP)</div>
+                <ul>
+                    <li>Modified <strong>GEANT4</strong> B1 example to simulate particle interactions and extract detector-level energy and momentum data.</li>
+                    <li>Enhanced visualization using geometry control and track rendering for complex simulation workflows.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Computational Projects</h2>
+            <div class="item">
+                <h3>Brain Tumor Classification via Hybrid Quantum CNNs</h3>
+                <ul>
+                    <li>Architected a Two-Stream HQ-CNN fusing a classical backbone with a 4-qubit parameterized quantum circuit (<strong>PennyLane</strong>).</li>
+                    <li>Engineered a fast vectorized quantum convolution algorithm, eliminating training bottlenecks and achieving a robust <strong>94.05% accuracy</strong>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-list">
+                <span class="skill-tag">CORSIKA</span>
+                <span class="skill-tag">GEANT4</span>
+                <span class="skill-tag">Python (Data pipelines)</span>
+                <span class="skill-tag">C++ (Simulations)</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">TensorFlow & PyTorch</span>
+                <span class="skill-tag">PennyLane (Quantum ML)</span>
+                <span class="skill-tag">Linux environments</span>
+                <span class="skill-tag">LaTeX</span>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts for Particle Background -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": ["#00f0ff", "#b026ff", "#ffffff"]
+                },
+                "shape": {
+                    "type": "circle",
+                },
+                "opacity": {
+                    "value": 0.6,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00f0ff",
+                    "opacity": 0.3,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 200,
+                        "line_linked": {
+                            "opacity": 0.8
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
